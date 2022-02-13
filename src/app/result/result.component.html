@@ -1,0 +1,32 @@
+<ng-container 
+ *ngIf="profileList"
+class="container-fluid">
+
+<table>
+    <thead class="thd">
+        <th class="tableHeader" (click)="sortByType()">Type <i class="fa fa-sort"></i></th>
+        <th class="tableHeader" (click)="sortByLogin()">Login <i class="fa fa-sort"></i></th>
+        <th class="tableHeader" (click)="sortByUrl()">Avtar URL <i class="fa fa-sort"></i></th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of profileList | paginate: { itemsPerPage: 9, currentPage: p }">
+            <td class="tableHeader">{{item.type}}</td>
+            <td class="tableHeader">{{item.login}}</td>
+             
+            <td class="tableHeader">
+            
+              <a>{{item.avatar_url}}</a>  </td>
+          
+        </tr>
+    </tbody>
+</table>
+<br>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
+</ng-container>
+
+<ng-container *ngIf="errMsg">
+<p class="er">
+    {{errMsg}}
+    
+</p>
+</ng-container>

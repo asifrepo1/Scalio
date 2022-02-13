@@ -1,0 +1,20 @@
+.box{
+     
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    font-size: 22px;
+    letter-spacing: 0.28px;
+}
+.box .selected {
+align-self: center;
+}
+.inp{
+width: 20rem;
+text-align: center;
+}
+.custom-btn{
+    margin-left: 10px;
+}
