@@ -1,5 +1,5 @@
 <ng-container 
- *ngIf="profileList"
+ *ngIf="profileList.length >0 "
 class="container-fluid">
 
 <table>
@@ -23,7 +23,10 @@ class="container-fluid">
 <br>
 <pagination-controls (pageChange)="p = $event"></pagination-controls>
 </ng-container>
-
+<ng-container class="er"
+ *ngIf="profileList.length == 0 ">
+No Item Found, Please search with different key
+</ng-container>
 <ng-container *ngIf="errMsg">
 <p class="er">
     {{errMsg}}
