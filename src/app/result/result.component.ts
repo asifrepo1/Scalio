@@ -26,7 +26,7 @@ export class ResultComponent implements OnInit,DoCheck {
     this.dataService.http404.subscribe(data=>{
       this.errMsg = data;
     });
-    console.log(this.profileList);
+    
   }
   
 
